@@ -1,0 +1,93 @@
+.info {
+  height: 10%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.time {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.7;
+  margin: auto;
+}
+
+.currently {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.initil {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.restore {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+@media screen and (max-width: 900px) {
+  .info {
+    grid-template-columns:  1fr 1fr 100px;
+  }
+
+  .initil {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .currently {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .time {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .restore {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  .initil {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .currently {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .time {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
